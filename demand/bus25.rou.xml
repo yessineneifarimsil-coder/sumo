@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <vType id="bus" vClass="bus" length="12.0" accel="1.5" decel="4.5" maxSpeed="15.0" sigma="0.3"/>
+
+    <!-- ROUTING MODE: <trip from=".." to=".."/>, not a fixed <route edges="..">.
+     SUMO computes the path at load time, so this survives network edits
+     instead of silently breaking like the old hand-typed 4-edge sequence
+     (E1, 245250305#20, 245250305#35, 693648180), which was never a
+     connected path in the graph.
+
+     E1 direction: the network file has E1 as from="-2948" to="-1531"
+     (into the corridor). An earlier comment here claimed E1 had been
+     flipped to J2 -> -2948; that is NOT what the network contains. The
+     network file is authoritative. Corrected 2026-08-16.
+
+     RETOUR DESTINATION: was to="E9". E9 is unreachable from 693648180
+     (verified by BFS and by SUMO itself: "No connection between edge
+     693648180 and edge E9 found" -> "has no valid route" -> hard abort).
+     E9 is a one-way entry ramp, so it cannot be a destination.
+     Provisionally set to E5, the roundabout exit stub, whose end lies
+     ~48 m from E1's origin junction -2948 and which IS reachable from
+     the corridor. THIS IS A PLACEHOLDER, not a surveyed terminus -
+     replace it with the real Bus 25 western terminus.
+
+     Note: XML comments must not contain two consecutive hyphens. The
+     previous version of this comment did, which made SUMO abort at load
+     time with an "illegal sequence in comment" parse error. -->
+
+    <trip id="bus25_aller_am.0" depart="25200" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.0" depart="25200" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.1" depart="25620" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.1" depart="25620" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.2" depart="26040" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.2" depart="26040" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.3" depart="26460" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.3" depart="26460" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.4" depart="26880" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.4" depart="26880" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.5" depart="27300" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.5" depart="27300" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.6" depart="27720" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.6" depart="27720" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.7" depart="28140" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.7" depart="28140" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.8" depart="28560" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.8" depart="28560" from="693648180" to="E5" type="bus"/>
+    <trip id="bus25_aller_am.9" depart="28980" from="E1" to="693648180" type="bus"/>
+    <trip id="bus25_retour_am.9" depart="28980" from="693648180" to="E5" type="bus"/>
+
+</routes>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edgeRelations>
+  <interval begin="0" end="86400">
+    <edgeRelation from="245250305#20" to="-45856427#12" probability="0.18"/>
+    <edgeRelation from="840858019#0" to="32899529#0" probability="0.18"/>
+    <edgeRelation from="245250305#15" to="34099450#0" probability="0.08"/>
+    <edgeRelation from="840516306#13" to="104146095#0" probability="0.08"/>
+    <edgeRelation from="840516306#10" to="189714531#0" probability="0.08"/>
+    <edgeRelation from="245250305#35" to="84622241#0" probability="0.08"/>
+    <edgeRelation from="840858019#2" to="696755176#0" probability="0.18"/>
+    <edgeRelation from="840858019#2" to="-498049061#6" probability="0.18"/>
+    <edgeRelation from="695794392#1" to="695794392#2" probability="0.18"/>
+    <edgeRelation from="189714629#12" to="696548741" probability="0.18"/>
+    <edgeRelation from="189714629#21" to="320512703#0" probability="0.18"/>
+  </interval>
+</edgeRelations>

@@ -1,0 +1,15 @@
+name: routetunis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - sumolib
+      - traci
+      - pandas
+      - matplotlib
+# Note: SUMO itself (sumo, sumo-gui, jtrrouter, netedit) is installed
+# separately via the official SUMO installer / apt / brew, not via conda.
+# Make sure SUMO_HOME is set in your environment, e.g. on Windows:
+#   setx SUMO_HOME "C:\Program Files (x86)\Eclipse\Sumo"

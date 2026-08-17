@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <!-- Paths are relative to THIS FILE, which is how SUMO resolves them, so
+         this works from any working directory. Layout assumed:
+         network/  demand/  signals/  config/  routes/  outputs/ -->
+
+    <input>
+        <net-file value="../network/routetunisraw_recomputed.net.xml"/>
+        <route-files value="../routes/routetunis_routes.xml,../demand/bus25.rou.xml"/>
+        <additional-files value="../signals/feux_corrected.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="25200"/>  <!-- 07:00 -->
+        <end value="68400"/>    <!-- 19:00 -->
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <!-- Safety valve for the residual side-street deadlocks, not a fix.
+             time-to-teleport.stopped is NOT a SUMO option and was removed on
+             2026-08-16; it made this config fail to load entirely. -->
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <report>
+        <duration-log.statistics value="true"/>
+        <tripinfo-output value="../outputs/routetunis_tripinfo.xml"/>
+        <summary-output value="../outputs/routetunis_summary.xml"/>
+        <no-step-log value="true"/>
+        <verbose value="false"/>
+    </report>
+
+</configuration>

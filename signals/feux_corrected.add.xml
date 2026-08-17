@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+
+    <!-- Route de Tunis signal programmes. Regenerated 2026-08-16.
+         State strings are taken verbatim from the network's own computed
+         logic, so each is the correct width for that junction's link
+         indices (6 / 7 / 16). Lowercase g marks permissive (yield)
+         movements. A 4 s all-red clearance phase has been appended to each
+         programme; conflict-free links that the network holds green in every
+         phase are deliberately left green through it (see per-junction
+         notes), because clearing them would cost capacity for no safety
+         gain. Cycle is 90 s everywhere so the 0/15/30 offsets coordinate. -->
+
+    <!-- -3115: 6 signals. both approaches are Route de Tunis (highway.primary) in opposite
+         directions, so the split is kept symmetric rather than forced into a
+         50/30 major-minor bias.
+         link 0 is green in all four computed phases (conflict-free),
+         so it stays green through the all-red clearance. -->
+    <tlLogic id="-3115" type="static" programID="1" offset="0">
+        <phase duration="40" state="GrrGGg"/>
+        <phase duration="3" state="Grryyy"/>
+        <phase duration="40" state="GGGrrr"/>
+        <phase duration="3" state="Gyyrrr"/>
+        <phase duration="4" state="Grrrrr"/>
+    </tlLogic>
+
+    <!-- -3121: 7 signals. phase 0 serves the primary corridor, phase 2 the highway.service side road.
+         link 5 is green in all four computed phases (conflict-free),
+         so it stays green through the all-red clearance. -->
+    <tlLogic id="-3121" type="static" programID="1" offset="15">
+        <phase duration="50" state="GgrrrGG"/>
+        <phase duration="3" state="yyrrrGy"/>
+        <phase duration="30" state="rrGGgGr"/>
+        <phase duration="3" state="rryyyGr"/>
+        <phase duration="4" state="rrrrrGr"/>
+    </tlLogic>
+
+    <!-- -5174: 16 signals. phase 0 serves the primary corridor, phase 2 the highway.secondary cross street.
+         No conflict-free links; the clearance phase is fully red. -->
+    <tlLogic id="-5174" type="static" programID="1" offset="30">
+        <phase duration="50" state="GGggrrrrGGggrrrr"/>
+        <phase duration="3" state="yyyyrrrryyyyrrrr"/>
+        <phase duration="30" state="rrrrGGggrrrrGGgg"/>
+        <phase duration="3" state="rrrryyyyrrrryyyy"/>
+        <phase duration="4" state="rrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+
+</additional>

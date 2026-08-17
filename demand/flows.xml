@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <vType id="car" vClass="passenger" length="4.8" accel="2.6" decel="4.5" maxSpeed="13.9" sigma="0.5"/>
+    <vType id="bus" vClass="bus" length="12.0" accel="1.5" decel="4.5" maxSpeed="15.0" sigma="0.3"/>
+
+    
+    <!-- AM -->
+    <flow id="main_am" begin="25200" end="32400" vehsPerHour="1200" from="26603900#0" type="car"/>
+    <flow id="lat1_am" begin="25200" end="32400" vehsPerHour="60" from="392758109#1" type="car"/>
+    <flow id="lat2_am" begin="25200" end="32400" vehsPerHour="40" from="35884314" type="car"/>
+    <flow id="lat3_am" begin="25200" end="32400" vehsPerHour="30" from="45856427#12" type="car"/>
+    <flow id="lat4_am" begin="25200" end="32400" vehsPerHour="25" from="35884340" type="car"/>
+    <flow id="lat5_am" begin="25200" end="32400" vehsPerHour="20" from="245316954#0" type="car"/>
+    <flow id="bretelle_east_am" begin="25200" end="32400" vehsPerHour="50" from="E1" type="car"/>
+    <flow id="bretelle_west_am" begin="25200" end="32400" vehsPerHour="50" from="E9" type="car"/>
+  
+
+    <!-- MID -->
+    <flow id="bretelle_east_mid" begin="43200" end="50400" vehsPerHour="30" from="E1" type="car"/>
+    <flow id="bretelle_west_mid" begin="43200" end="50400" vehsPerHour="30" from="E9" type="car"/>
+    <flow id="main_mid" begin="43200" end="50400" vehsPerHour="800" from="26603900#0" type="car"/>
+
+    <!-- PM -->
+    <flow id="bretelle_east_pm" begin="61200" end="68400" vehsPerHour="60" from="E1" type="car"/>
+    <flow id="bretelle_west_pm" begin="61200" end="68400" vehsPerHour="60" from="E9" type="car"/>
+    <flow id="main_pm" begin="61200" end="68400" vehsPerHour="1300" from="26603900#0" type="car"/>
+
+</routes>
