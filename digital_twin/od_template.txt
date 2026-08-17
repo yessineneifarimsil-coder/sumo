@@ -1,0 +1,26 @@
+$OR;D2
+* From-Time  To-Time   (hours, decimal)
+7.00 8.00
+* Factor
+1.00
+*
+* Route de Tunis cordon OD matrix.
+* Gate ids match digital_twin/cordon_tazs.add.xml.
+* Format: <origin gate> <destination gate> <vehicles in the interval>
+*
+* !!! THE NUMBERS BELOW ARE PLACEHOLDERS, NOT OBSERVED DATA !!!
+* Replace every one of them with real counts before any result is reported.
+* Until then this file produces a working pipeline, not a valid model.
+*
+* Feasible pairs only - see docs for the reachability matrix.
+* G01 is currently unusable as an origin: its entry edge 29346361#0 reaches
+* only 11 of 3269 edges (isolated pocket, see docs). Fix the network first.
+*
+G04 G14 200
+G14 G04 180
+G03 G14 60
+G14 G03 55
+G09 G01 40
+G11 G01 55
+G12 G14 30
+G13 G01 35

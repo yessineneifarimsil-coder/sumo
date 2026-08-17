@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+
+    <!-- Route de Tunis corridor cordon, for routetunisraw_recomputed_v3.net.xml.
+         Corridor: 35282563 (after the Sfax centre roundabout, where Route de
+         Tunis splits from Route de Taniour) to 246625392#1 (northern roundabout,
+         Cite Ons / Mall of Sfax / Cite Universitaire). 160 edges, 10.43 km,
+         one lane each way separated by a painted line only.
+
+         Edges that disallow passenger cars - pedestrian / delivery / bicycle
+         service ways - are excluded. 88 such edges exist in the network.
+         Including them made duarouter reject 26 vehicles with
+         "not allowed to depart/arrive on edge".
+
+         J-zones: primary/secondary/tertiary side roads, count individually.
+         L-zones: local accesses aggregated per kilometre, estimate as blocks.
+         km = chainage from 35282563. TL = signalised. -->
+
+    <!-- km  0.00  southern entry from the Sfax centre roundabout  node -836 -->
+    <taz id="ENTRY_S">
+        <tazSource id="694061752#1" weight="1.00"/>
+        <tazSink id="694061752#2" weight="1.00"/>
+    </taz>
+
+    <!-- km 10.43  northern roundabout (Cite Ons / Mall of Sfax)  node -3185 -->
+    <taz id="EXIT_N">
+        <tazSource id="39381791" weight="1.00"/>
+        <tazSink id="39381790" weight="1.00"/>
+        <tazSink id="39381792" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.04  node -839    primary              34.74713,10.76014 -->
+    <taz id="J01">
+        <tazSink id="35282667" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.20  node -3114   primary              34.74884,10.76072 -->
+    <taz id="J02">
+        <tazSource id="-245250305#4" weight="1.00"/>
+        <tazSink id="245250305#4" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.20  node -4664   secondary            34.74883,10.76078 -->
+    <taz id="J03">
+        <tazSource id="697299384#0" weight="1.00"/>
+        <tazSink id="697299384#1" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.20  node -810    secondary            34.74848,10.76103 -->
+    <taz id="J04">
+        <tazSource id="392758109#0" weight="1.00"/>
+        <tazSink id="34099474#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.20  node -3116   primary              34.74890,10.76077 -->
+    <taz id="J05">
+        <tazSource id="245250305#5" weight="1.00"/>
+        <tazSink id="-245250305#5" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.61  node -1546   secondary            34.75431,10.76224  TL -->
+    <taz id="J06">
+        <tazSource id="45856427#12" weight="1.00"/>
+        <tazSink id="-45856427#12" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.63  node -1329   secondary            34.75463,10.76131  TL -->
+    <taz id="J07">
+        <tazSource id="35884340" weight="1.00"/>
+    </taz>
+
+    <!-- km  0.64  node -1330   secondary            34.75472,10.76205 -->
+    <taz id="J08">
+        <tazSink id="35884351" weight="1.00"/>
+    </taz>
+
+    <!-- km  1.61  node -1646   primary              34.76569,10.76216 -->
+    <taz id="J09">
+        <tazSource id="-245250305#36" weight="1.00"/>
+        <tazSink id="245250305#36" weight="1.00"/>
+    </taz>
+
+    <!-- km  2.47  node -2032   tertiary             34.77428,10.76171 -->
+    <taz id="J10">
+        <tazSource id="-320038566#0" weight="1.00"/>
+        <tazSink id="320038566#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  2.94  node -7157   primary              34.77883,10.76069 -->
+    <taz id="J11">
+        <tazSource id="840516306#2" weight="1.00"/>
+        <tazSink id="-840516306#2" weight="1.00"/>
+    </taz>
+
+    <!-- km  3.94  node -1388   tertiary             34.78976,10.76026 -->
+    <taz id="J12">
+        <tazSource id="-38001514#0" weight="1.00"/>
+        <tazSink id="38001514#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  4.85  node -389    tertiary             34.79978,10.75976 -->
+    <taz id="J13">
+        <tazSource id="-32899529#0" weight="1.00"/>
+        <tazSink id="32899529#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  4.94  node -4671   primary              34.80229,10.76127 -->
+    <taz id="J14">
+        <tazSource id="-840858019#2" weight="1.00"/>
+        <tazSink id="840858019#2" weight="1.00"/>
+    </taz>
+
+    <!-- km  5.10  node -5172   secondary            34.80244,10.76121 -->
+    <taz id="J15">
+        <tazSource id="-498049061#6" weight="1.00"/>
+        <tazSource id="498049061#5" weight="1.00"/>
+        <tazSink id="-498049061#5" weight="1.00"/>
+        <tazSink id="498049061#6" weight="1.00"/>
+    </taz>
+
+    <!-- km  5.21  node -573    primary              34.80246,10.76132 -->
+    <taz id="J16">
+        <tazSource id="784572756#0" weight="1.00"/>
+        <tazSink id="-784572756#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  5.34  node -9171   tertiary             34.80489,10.76163 -->
+    <taz id="J17">
+        <tazSource id="-721542871#0" weight="1.00"/>
+        <tazSink id="721542871#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  5.90  node -622    primary              34.81177,10.76178  TL -->
+    <taz id="J18">
+        <tazSource id="-784572756#9" weight="1.00"/>
+        <tazSink id="784572756#9" weight="1.00"/>
+    </taz>
+
+    <!-- km  5.91  node -624    tertiary             34.81097,10.76330 -->
+    <taz id="J19">
+        <tazSource id="-32904562#1" weight="1.00"/>
+        <tazSource id="-699928735#5" weight="1.00"/>
+        <tazSink id="32904562#1" weight="1.00"/>
+        <tazSink id="699928735#5" weight="1.00"/>
+    </taz>
+
+    <!-- km  6.37  node -745    primary              34.81520,10.76206 -->
+    <taz id="J20">
+        <tazSource id="840437798#1" weight="1.00"/>
+        <tazSink id="-840437798#1" weight="1.00"/>
+    </taz>
+
+    <!-- km  7.29  node -3067   primary              34.82485,10.76342 -->
+    <taz id="J21">
+        <tazSource id="189714643" weight="1.00"/>
+    </taz>
+
+    <!-- km  7.34  node -3194   primary              34.82487,10.76347 -->
+    <taz id="J22">
+        <tazSource id="695794392#0" weight="1.00"/>
+    </taz>
+
+    <!-- km  7.36  node -3058   primary              34.82510,10.76361 -->
+    <taz id="J23">
+        <tazSink id="695794392#2" weight="1.00"/>
+    </taz>
+
+    <!-- km  7.42  node -2991   primary              34.82582,10.76368 -->
+    <taz id="J24">
+        <tazSink id="248819853" weight="1.00"/>
+    </taz>
+
+    <!-- km  8.48  node -521    tertiary             34.83506,10.76225 -->
+    <taz id="J25">
+        <tazSource id="32899546" weight="1.00"/>
+    </taz>
+
+    <!-- km  8.48  node -3012   tertiary             34.83670,10.76483 -->
+    <taz id="J26">
+        <tazSink id="696548741" weight="1.00"/>
+    </taz>
+
+    <!-- km  9.38  node -3032   tertiary             34.84470,10.75965 -->
+    <taz id="J27">
+        <tazSource id="-320512703#0" weight="1.00"/>
+        <tazSink id="320512703#0" weight="1.00"/>
+    </taz>
+
+    <!-- km 10.33  node -1478   primary              34.85596,10.75985 -->
+    <taz id="J28">
+        <tazSource id="39381792" weight="1.00"/>
+    </taz>
+
+    <!-- km 0.0-1.0  local access, 18 nodes aggregated -->
+    <taz id="L00">
+        <tazSource id="-1190751101" weight="1.00"/>
+        <tazSource id="-34099450#0" weight="1.00"/>
+        <tazSource id="-35884057" weight="1.00"/>
+        <tazSource id="-35884066#0" weight="1.00"/>
+        <tazSource id="-35884067#0" weight="1.00"/>
+        <tazSource id="-35884069" weight="1.00"/>
+        <tazSource id="-45873128#0" weight="1.00"/>
+        <tazSource id="-696703712#0" weight="1.00"/>
+        <tazSource id="-697139001" weight="1.00"/>
+        <tazSource id="35884314" weight="1.00"/>
+        <tazSource id="35884318#1" weight="1.00"/>
+        <tazSource id="35884328" weight="1.00"/>
+        <tazSource id="35884411#2" weight="1.00"/>
+        <tazSource id="364181686#2" weight="1.00"/>
+        <tazSource id="697139000" weight="1.00"/>
+        <tazSource id="96147859" weight="1.00"/>
+        <tazSource id="96147900#3" weight="1.00"/>
+        <tazSink id="-35884314" weight="1.00"/>
+        <tazSink id="-35884328" weight="1.00"/>
+        <tazSink id="-35884411#2" weight="1.00"/>
+        <tazSink id="-364181686#2" weight="1.00"/>
+        <tazSink id="-697139000" weight="1.00"/>
+        <tazSink id="-96147859" weight="1.00"/>
+        <tazSink id="-96147900#3" weight="1.00"/>
+        <tazSink id="1190751101" weight="1.00"/>
+        <tazSink id="34099450#0" weight="1.00"/>
+        <tazSink id="35884057" weight="1.00"/>
+        <tazSink id="35884066#0" weight="1.00"/>
+        <tazSink id="35884067#0" weight="1.00"/>
+        <tazSink id="35884069" weight="1.00"/>
+        <tazSink id="35884315#0" weight="1.00"/>
+        <tazSink id="35884327#0" weight="1.00"/>
+        <tazSink id="45873128#0" weight="1.00"/>
+        <tazSink id="696703712#0" weight="1.00"/>
+        <tazSink id="697139001" weight="1.00"/>
+    </taz>
+
+    <!-- km 1.0-2.0  local access, 12 nodes aggregated -->
+    <taz id="L01">
+        <tazSource id="-695610730" weight="1.00"/>
+        <tazSource id="-695616568" weight="1.00"/>
+        <tazSource id="-695623686" weight="1.00"/>
+        <tazSource id="-695623688" weight="1.00"/>
+        <tazSource id="-696633341#0" weight="1.00"/>
+        <tazSource id="-696977244#0" weight="1.00"/>
+        <tazSource id="-84622241#1" weight="1.00"/>
+        <tazSource id="-96143052#0" weight="1.00"/>
+        <tazSource id="1107020609" weight="1.00"/>
+        <tazSource id="695535573" weight="1.00"/>
+        <tazSource id="96143928" weight="1.00"/>
+        <tazSource id="96144162#11" weight="1.00"/>
+        <tazSource id="96147685#1" weight="1.00"/>
+        <tazSink id="-1107020609" weight="1.00"/>
+        <tazSink id="-695535573" weight="1.00"/>
+        <tazSink id="-96143928" weight="1.00"/>
+        <tazSink id="-96144162#11" weight="1.00"/>
+        <tazSink id="-96147685#1" weight="1.00"/>
+        <tazSink id="695610730" weight="1.00"/>
+        <tazSink id="695616568" weight="1.00"/>
+        <tazSink id="695623686" weight="1.00"/>
+        <tazSink id="695623688" weight="1.00"/>
+        <tazSink id="696633341#0" weight="1.00"/>
+        <tazSink id="696977244#0" weight="1.00"/>
+        <tazSink id="84622241#1" weight="1.00"/>
+        <tazSink id="96143052#0" weight="1.00"/>
+    </taz>
+
+    <!-- km 2.0-3.0  local access, 12 nodes aggregated -->
+    <taz id="L02">
+        <tazSource id="-189714524" weight="1.00"/>
+        <tazSource id="-320525803#0" weight="1.00"/>
+        <tazSource id="-694968672" weight="1.00"/>
+        <tazSource id="-696398854" weight="1.00"/>
+        <tazSource id="-704401659" weight="1.00"/>
+        <tazSource id="-772719507" weight="1.00"/>
+        <tazSource id="-84622830#0" weight="1.00"/>
+        <tazSource id="189714520" weight="1.00"/>
+        <tazSource id="189714556#1" weight="1.00"/>
+        <tazSource id="699928734#18" weight="1.00"/>
+        <tazSink id="-699928734#18" weight="1.00"/>
+        <tazSink id="189714522" weight="1.00"/>
+        <tazSink id="189714524" weight="1.00"/>
+        <tazSink id="189714558#0" weight="1.00"/>
+        <tazSink id="320525803#0" weight="1.00"/>
+        <tazSink id="694968672" weight="1.00"/>
+        <tazSink id="696398854" weight="1.00"/>
+        <tazSink id="704401659" weight="1.00"/>
+        <tazSink id="772719507" weight="1.00"/>
+        <tazSink id="84622830#0" weight="1.00"/>
+    </taz>
+
+    <!-- km 3.0-4.0  local access, 12 nodes aggregated -->
+    <taz id="L03">
+        <tazSource id="-104146095#0" weight="1.00"/>
+        <tazSource id="-189714531#0" weight="1.00"/>
+        <tazSource id="-189714532#0" weight="1.00"/>
+        <tazSource id="-693596338" weight="1.00"/>
+        <tazSource id="-693725092" weight="1.00"/>
+        <tazSource id="-697657430#0" weight="1.00"/>
+        <tazSource id="-705429367#0" weight="1.00"/>
+        <tazSource id="-705429371" weight="1.00"/>
+        <tazSource id="-892803914" weight="1.00"/>
+        <tazSource id="693585879" weight="1.00"/>
+        <tazSource id="693597877#1" weight="1.00"/>
+        <tazSource id="693717792" weight="1.00"/>
+        <tazSink id="-693585879" weight="1.00"/>
+        <tazSink id="-693597877#1" weight="1.00"/>
+        <tazSink id="-693717792" weight="1.00"/>
+        <tazSink id="104146095#0" weight="1.00"/>
+        <tazSink id="189714531#0" weight="1.00"/>
+        <tazSink id="189714532#0" weight="1.00"/>
+        <tazSink id="693596338" weight="1.00"/>
+        <tazSink id="693725092" weight="1.00"/>
+        <tazSink id="697657430#0" weight="1.00"/>
+        <tazSink id="705429367#0" weight="1.00"/>
+        <tazSink id="705429371" weight="1.00"/>
+        <tazSink id="892803914" weight="1.00"/>
+    </taz>
+
+    <!-- km 4.0-5.0  local access, 14 nodes aggregated -->
+    <taz id="L04">
+        <tazSource id="-183747343#0" weight="1.00"/>
+        <tazSource id="-691707851#0" weight="1.00"/>
+        <tazSource id="-693373035#0" weight="1.00"/>
+        <tazSource id="-693510148" weight="1.00"/>
+        <tazSource id="-693510150" weight="1.00"/>
+        <tazSource id="-693510153#0" weight="1.00"/>
+        <tazSource id="-696190461" weight="1.00"/>
+        <tazSource id="-696190462" weight="1.00"/>
+        <tazSource id="-696190463" weight="1.00"/>
+        <tazSource id="-696190464" weight="1.00"/>
+        <tazSource id="-696716120" weight="1.00"/>
+        <tazSource id="32904555#2" weight="1.00"/>
+        <tazSource id="394091815#0" weight="1.00"/>
+        <tazSource id="693510149" weight="1.00"/>
+        <tazSink id="-32904555#2" weight="1.00"/>
+        <tazSink id="-394091815#0" weight="1.00"/>
+        <tazSink id="-693510149" weight="1.00"/>
+        <tazSink id="183747343#0" weight="1.00"/>
+        <tazSink id="691707851#0" weight="1.00"/>
+        <tazSink id="693373035#0" weight="1.00"/>
+        <tazSink id="693510148" weight="1.00"/>
+        <tazSink id="693510150" weight="1.00"/>
+        <tazSink id="693510153#0" weight="1.00"/>
+        <tazSink id="696190461" weight="1.00"/>
+        <tazSink id="696190462" weight="1.00"/>
+        <tazSink id="696190463" weight="1.00"/>
+        <tazSink id="696190464" weight="1.00"/>
+        <tazSink id="696716120" weight="1.00"/>
+    </taz>
+
+    <!-- km 5.0-6.0  local access, 15 nodes aggregated -->
+    <taz id="L05">
+        <tazSource id="-320511584#0" weight="1.00"/>
+        <tazSource id="-320511586#0" weight="1.00"/>
+        <tazSource id="-696549827" weight="1.00"/>
+        <tazSource id="-696549828" weight="1.00"/>
+        <tazSource id="-696549829" weight="1.00"/>
+        <tazSource id="-696549830" weight="1.00"/>
+        <tazSource id="-696557901" weight="1.00"/>
+        <tazSource id="-706259950" weight="1.00"/>
+        <tazSource id="-721542870#0" weight="1.00"/>
+        <tazSource id="-823729668#4" weight="1.00"/>
+        <tazSource id="32904560#4" weight="1.00"/>
+        <tazSource id="696549827" weight="1.00"/>
+        <tazSource id="705429364" weight="1.00"/>
+        <tazSource id="721542870#6" weight="1.00"/>
+        <tazSink id="-32904560#4" weight="1.00"/>
+        <tazSink id="-696549827" weight="1.00"/>
+        <tazSink id="-705429364" weight="1.00"/>
+        <tazSink id="-721542870#6" weight="1.00"/>
+        <tazSink id="320511584#0" weight="1.00"/>
+        <tazSink id="320511586#0" weight="1.00"/>
+        <tazSink id="32899533" weight="1.00"/>
+        <tazSink id="696549827" weight="1.00"/>
+        <tazSink id="696549828" weight="1.00"/>
+        <tazSink id="696549829" weight="1.00"/>
+        <tazSink id="696549830" weight="1.00"/>
+        <tazSink id="696557901" weight="1.00"/>
+        <tazSink id="706259950" weight="1.00"/>
+        <tazSink id="721542870#0" weight="1.00"/>
+        <tazSink id="823729668#4" weight="1.00"/>
+    </taz>
+
+    <!-- km 6.0-7.0  local access, 8 nodes aggregated -->
+    <taz id="L06">
+        <tazSource id="-320507340#0" weight="1.00"/>
+        <tazSource id="-32899535#0" weight="1.00"/>
+        <tazSource id="-699928736#0" weight="1.00"/>
+        <tazSource id="-706262729" weight="1.00"/>
+        <tazSource id="693145215#2" weight="1.00"/>
+        <tazSource id="696956176#1" weight="1.00"/>
+        <tazSource id="696961683#2" weight="1.00"/>
+        <tazSource id="706259949" weight="1.00"/>
+        <tazSource id="706259952#7" weight="1.00"/>
+        <tazSink id="-693145215#2" weight="1.00"/>
+        <tazSink id="-696956176#1" weight="1.00"/>
+        <tazSink id="-696961683#2" weight="1.00"/>
+        <tazSink id="-706259949" weight="1.00"/>
+        <tazSink id="-706259952#7" weight="1.00"/>
+        <tazSink id="320507340#0" weight="1.00"/>
+        <tazSink id="32899535#0" weight="1.00"/>
+        <tazSink id="699928736#0" weight="1.00"/>
+        <tazSink id="706262729" weight="1.00"/>
+    </taz>
+
+    <!-- km 7.0-8.0  local access, 8 nodes aggregated -->
+    <taz id="L07">
+        <tazSource id="-189714528#0" weight="1.00"/>
+        <tazSource id="-320506985#0" weight="1.00"/>
+        <tazSource id="-320516453#0" weight="1.00"/>
+        <tazSource id="-320516454#0" weight="1.00"/>
+        <tazSource id="-320516455" weight="1.00"/>
+        <tazSource id="320506986" weight="1.00"/>
+        <tazSource id="696950010#1" weight="1.00"/>
+        <tazSource id="696956174" weight="1.00"/>
+        <tazSink id="-320506986" weight="1.00"/>
+        <tazSink id="-696950010#1" weight="1.00"/>
+        <tazSink id="-696956174" weight="1.00"/>
+        <tazSink id="189714528#0" weight="1.00"/>
+        <tazSink id="320506985#0" weight="1.00"/>
+        <tazSink id="320516453#0" weight="1.00"/>
+        <tazSink id="320516454#0" weight="1.00"/>
+        <tazSink id="320516455" weight="1.00"/>
+    </taz>
+
+    <!-- km 8.0-9.0  local access, 7 nodes aggregated -->
+    <taz id="L08">
+        <tazSource id="-205935405#0" weight="1.00"/>
+        <tazSource id="-35606354#0" weight="1.00"/>
+        <tazSource id="1069371132" weight="1.00"/>
+        <tazSource id="320513245#4" weight="1.00"/>
+        <tazSource id="696543794" weight="1.00"/>
+        <tazSink id="-320513245#4" weight="1.00"/>
+        <tazSink id="1069371131" weight="1.00"/>
+        <tazSink id="189714530" weight="1.00"/>
+        <tazSink id="205935405#0" weight="1.00"/>
+        <tazSink id="35606354#0" weight="1.00"/>
+    </taz>
+
+    <!-- km 9.0-10.0  local access, 8 nodes aggregated -->
+    <taz id="L09">
+        <tazSource id="-391553387" weight="1.00"/>
+        <tazSource id="-704087534" weight="1.00"/>
+        <tazSource id="-704087535#0" weight="1.00"/>
+        <tazSource id="1124024624" weight="1.00"/>
+        <tazSource id="1124024625" weight="1.00"/>
+        <tazSource id="693648178#2" weight="1.00"/>
+        <tazSource id="693648179#1" weight="1.00"/>
+        <tazSource id="693648182#3" weight="1.00"/>
+        <tazSource id="693718882" weight="1.00"/>
+        <tazSink id="-1124024624" weight="1.00"/>
+        <tazSink id="-1124024625" weight="1.00"/>
+        <tazSink id="-693648178#2" weight="1.00"/>
+        <tazSink id="-693648179#1" weight="1.00"/>
+        <tazSink id="-693648182#3" weight="1.00"/>
+        <tazSink id="-693718882" weight="1.00"/>
+        <tazSink id="391553387" weight="1.00"/>
+        <tazSink id="704087534" weight="1.00"/>
+        <tazSink id="704087535#0" weight="1.00"/>
+    </taz>
+
+    <!-- km 10.0-11.0  local access, 3 nodes aggregated -->
+    <taz id="L10">
+        <tazSource id="-320506309#0" weight="1.00"/>
+        <tazSource id="-697108445" weight="1.00"/>
+        <tazSource id="-697108447#0" weight="1.00"/>
+        <tazSink id="320506309#0" weight="1.00"/>
+        <tazSink id="697108445" weight="1.00"/>
+        <tazSink id="697108447#0" weight="1.00"/>
+    </taz>
+
+</additional>

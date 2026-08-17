@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <!-- Corridor model, OD-based demand. Paths relative to THIS file.
+         Layout: network/  demand/  signals/  config/  routes/  outputs/  digital_twin/
+
+         DEMAND IS SYNTHETIC. See digital_twin/od_synthetic_am.txt.
+         Nothing produced by this config is a finding until real counts replace it. -->
+
+    <input>
+        <net-file value="../network/routetunisraw_recomputed_v3.net.xml"/>
+        <route-files value="../routes/routes_am.xml"/>
+        <additional-files value="../signals/feux_corrected.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="25200"/>   <!-- 07:00 -->
+        <end value="28800"/>     <!-- 08:00, one peak hour -->
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <report>
+        <duration-log.statistics value="true"/>
+        <tripinfo-output value="../outputs/am_tripinfo.xml"/>
+        <summary-output value="../outputs/am_summary.xml"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
