@@ -2,3 +2,4 @@ outputs/
 routes/routetunis_routes.xml
 *.pyc
 __pycache__/
+routes/
