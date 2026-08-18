@@ -4,8 +4,8 @@
     <!-- Route de Tunis corridor cordon, for routetunisraw_recomputed_v3.net.xml.
          Corridor: 35282563 (after the Sfax centre roundabout, where Route de
          Tunis splits from Route de Taniour) to 246625392#1 (northern roundabout,
-         Cite Ons / Mall of Sfax / Cite Universitaire). 160 edges, 10.43 km,
-         one lane each way separated by a painted line only.
+         Cite Ons / Mall of Sfax / Cite Universitaire). 160 edges, 12.42 km driven (10.43 km of edge length plus 1.99 km
+         of junction internal lanes across 159 junctions). Free-flow 14.8 min.
 
          Edges that disallow passenger cars - pedestrian / delivery / bicycle
          service ways - are excluded. 88 such edges exist in the network.

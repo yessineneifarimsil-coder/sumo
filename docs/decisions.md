@@ -1,4 +1,4 @@
-# Modeling Decisions Log
+﻿# Modeling Decisions Log
 
 One entry per non-obvious choice, so you can defend it in your defense.
 
@@ -492,3 +492,4 @@ buses silently dropped as unsorted).
 5. Fix the two sections both numbered 3.1.3 in the proposal.
 6. After the baseline is stable: the precise split of `840516306#1` at
    (2653.12, 4574.83) to move the E1 merge to its true position.
+Corridor length corrected to 12.42 km, 17 Aug 2026. Summing SUMO <edge> lengths gives 10.43 km, but that omits the internal lanes inside junctions — 1.99 km across 159 junctions, mean 12.6 m each. The error was caught by a geometry sanity check: the corridor endpoints are 12.15 km apart in a straight line, and a road cannot be shorter than the straight line between its ends. Detour ratio is now 1.02. Free-flow travel time is 14.8 min, not 12.2. The original "13 km" project figure was closer to correct than the 10.4 km correction that briefly replaced it. scripts\travel_time_calibration.py::measure_corridor now computes this properly and its self-test prints the old figure as IMPOSSIBLE so it cannot be reintroduced.
