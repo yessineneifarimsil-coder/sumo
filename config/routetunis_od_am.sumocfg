@@ -30,6 +30,7 @@
         <tripinfo-output value="../outputs/am_tripinfo.xml"/>
         <summary-output value="../outputs/am_summary.xml"/>
         <no-step-log value="true"/>
+        <vehroute-output value="../outputs/am_vehroutes.xml"/>
     </report>
 
 </configuration>
